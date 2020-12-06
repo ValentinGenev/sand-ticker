@@ -1,0 +1,10 @@
+# NPM related
+/node_modules
+package-lock.json
+
+# Project related
+src/.sass-cache
+src/dev-env.html
+
+# OS related
+desktop.ini

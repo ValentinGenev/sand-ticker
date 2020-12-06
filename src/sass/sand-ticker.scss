@@ -1,0 +1,40 @@
+.sand-ticker {
+	position: relative;
+	height: 0;
+	transition: height .25s ease;
+	overflow: hidden;
+
+	.ticker {
+		position: absolute;
+		display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+		width: max-content;
+		margin: 0;
+		padding: 0;
+		opacity: 0;
+		list-style: none;
+		transition: opacity 0.25s ease;
+
+		&.animate.loop-left {
+			animation: loopLeft 20s linear infinite;
+			opacity: 1;
+
+			&:hover {
+				-webkit-animation-play-state: paused;
+				-moz-animation-play-state: paused;
+				-o-animation-play-state: paused;
+				animation-play-state: paused;
+			}
+		}
+
+		.item {
+			padding: 0 .5rem;
+		}
+	}
+}
+
+@keyframes loopLeft {
+	from { transform: translate(0); }
+	to { transform: translate(-100%); }
+}

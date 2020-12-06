@@ -1,0 +1,75 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Sand Ticker Demo</title>
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
+
+	<!-- The Sand Ticker stylesheet -->
+	<link rel="stylesheet" href="../dist/sand-ticker.css">
+
+	<!-- Demo styles -->
+	<style>
+		body {
+			margin: 0;
+			font-family: 'Lato', Arial, Helvetica, sans-serif;
+			font-size: 18px;
+			background-color: #f9f9f9;
+		}
+
+		.demo-wrapper {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			min-height: 100vh;
+		}
+
+		.demo-title {
+			margin-top: 0;
+			text-align: center;
+			color: #484c7f;
+		}
+
+		/**
+		 * The sand Carousel overwrites
+		 * 
+		 * Please note that you need to use specific
+		 * selectors to overwrite the slides.
+		 * The original styles were written that way
+		 * to prevent unwanted overwrites.
+		 */
+		.sand-ticker .slide {}
+	</style>
+</head>
+
+<body>
+	<main class="demo-wrapper">
+		<h1 class="demo-title">Sand Ticker's demo</h1>
+
+		<div class="sand-ticker">			 
+			<ul class="ticker">
+				<li class="item">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+				<li class="item">Aenean ut lectus magna.</li>
+				<li class="item">Vivamus eu ante at neque pretium congue.</li>
+				<li class="item">Mauris elit turpis, efficitur tempus volutpat in, aliquam id lorem.</li>
+			</ul>
+		</div>
+	</main>
+
+	<script src="../dist/sand-ticker.js"></script>
+
+	<!-- Sand Ticker initiations -->
+	<script>
+		window.addEventListener('load', () => {
+			const SAND_TICKER = new SandTicker('.sand-ticker', '.ticker', '.item', 10)
+
+			SAND_TICKER.initTheTicker()
+		})
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+{
+  "name": "sand-ticker",
+  "version": "1.0.0",
+  "description": "A simple JavaScript ticker.",
+  "scripts": {
+    "babel-watch": "babel src/js -w -d dist",
+    "sass-watch": "sass --watch src/sass:dist -s compressed",
+    "compile": "babel src/js -d dist && sass src/sass:dist -s compressed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ValentinGenev/sand-ticker.git"
+  },
+  "author": "Valentin Genev",
+  "homepage": "https://github.com/ValentinGenev/sand-ticker#readme",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ValentinGenev/sand-ticker/issues"
+  },
+  "keywords": [
+    "ticker-slider",
+    "carousel",
+    "slider"
+  ],
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "sass": "^1.29.0"
+  }
+}

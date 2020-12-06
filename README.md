@@ -1,2 +1,2 @@
-# sand-ticker
-Wall Street like carousel
+# Sand Ticker
+Wall Street like carousel.
